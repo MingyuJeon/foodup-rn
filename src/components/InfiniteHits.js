@@ -19,13 +19,20 @@ const styles = StyleSheet.create({
     },
 });
 
-const InfiniteHits = ({hits, hasMore, refine, moveTo}) => {
+const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
+    let test;
+
+    if (flag === 'stores') {
+        test = hits.filter(hit => hit.hasOwnProperty('addr'))
+    } else {
+        test = hits
+    }
     return (
         <KeyboardAvoidingView style={{
             flex: 1,
         }} behavior={Platform.OS === 'ios' ? 'padding' : null}>
             <FlatList
-                data={hits}
+                data={test}
                 keyExtractor={item => item.objectID}
                 onEndReached={() => hasMore && refine()}
                 renderItem={({item}) => {

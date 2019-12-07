@@ -68,7 +68,7 @@ class SearchScreen extends React.Component {
                         <SearchBox/>
                         <Index indexName="categories">
                             <IndexTitle>FOOD CATEGORIES</IndexTitle>
-                            <InfiniteHits hitComponent={Hits} moveTo={this.moveToCategory}/>
+                            <InfiniteHits flag={'categories'} hitComponent={Hits} moveTo={this.moveToCategory}/>
                             <View style={{
                                 borderBottomWidth: 1,
                                 borderColor: '#c1c1c1',
@@ -78,7 +78,7 @@ class SearchScreen extends React.Component {
                         </Index>
                             <Index indexName="stores">
                                 <IndexTitle>RESTAURANTS</IndexTitle>
-                                <InfiniteHits hitComponent={Hits} moveTo={this.moveToStore}/>
+                                <InfiniteHits flag={'stores'} hitComponent={Hits} moveTo={this.moveToStore}/>
                             </Index>
                     </InstantSearch>
                 </Content>
