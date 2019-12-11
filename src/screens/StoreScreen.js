@@ -157,7 +157,8 @@ class StoreScreen extends React.Component {
         return (
             <>
                 <StoreDetailInfo action={this.showMap} img={addrIcn}>
-                    <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr}, ${city}, ${state}, ${zipCode}`}</Text>
+                    <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr}`}</Text>
+                    <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${city === 'LA' ? 'Los Angeles' : city}, ${state}, ${zipCode}`}</Text>
                 </StoreDetailInfo>
                 <StoreDetailInfo action={this.makeCall} img={phoneIcn}>
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{phone.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, '$1-$2-$3')}</Text>
@@ -174,30 +175,31 @@ class StoreScreen extends React.Component {
             <Container style={{backgroundColor: '#F0F7F5'}}>
                 <StoreScreenHeader navigation={this.props.navigation} storeData={this.state.storeData} favoriteFunc={this.state.triggerFunc}/>
                 <Content scrollEnabled={false} contentContainerStyle={{flex: 1, backgroundColor: '#F0F7F5'}}>
-                    <View style={{backgroundColor: '#F0F7F5', flex: 1, height: '100%'}}>
-                        <View style={storeStyles.titleContainer}>
-                            <Text allowFontScaling={false} style={storeStyles.title}>{this.state.storeName}</Text>
-                            <View style={storeStyles.tagsWrapper}>
-                                <FlatList
-                                    showsHorizontalScrollIndicator={false}
-                                    horizontal={true}
-                                    onEndThreshold={0}
-                                    data={this.state.storeData?.categoryChips}
-                                    renderItem={(chip) => {
-                                        return <Tag tag={chip.item.name} from={this.state.storeName} navigation={this.props.navigation} goToCategory={this.goToCategory}/>;
-                                    }}
-                                    keyExtractor={(item, i) => {
-                                        return i.toString();
-                                    }}
-                                    style={{width: '100%'}}
-                                />
+                    {this.state.storeData !== null ?
+                        <View style={{backgroundColor: '#F0F7F5', flex: 1, height: '100%'}}>
+                            <View style={storeStyles.titleContainer}>
+                                <Text allowFontScaling={false} style={storeStyles.title}>{this.state.storeName}</Text>
+                                <View style={storeStyles.tagsWrapper}>
+                                    <FlatList
+                                        showsHorizontalScrollIndicator={false}
+                                        horizontal={true}
+                                        onEndThreshold={0}
+                                        data={this.state.storeData?.categoryChips}
+                                        renderItem={(chip) => {
+                                            return <Tag tag={chip.item.name} from={this.state.storeName} navigation={this.props.navigation} goToCategory={this.goToCategory}/>;
+                                        }}
+                                        keyExtractor={(item, i) => {
+                                            return i.toString();
+                                        }}
+                                        style={{width: '100%'}}
+                                    />
+                                </View>
                             </View>
-                        </View>
-                        <ScrollView showsVerticalScrollIndicator={false}
-                                    bounces={true}
-                                    overScrollMode={'never'}
-                                    style={{backgroundColor: 'transparent', height: '100%'}}>
-                            {this.state.storeData !== null ?
+                            <ScrollView showsVerticalScrollIndicator={false}
+                                        bounces={true}
+                                        overScrollMode={'never'}
+                                        style={{backgroundColor: 'transparent', height: '100%'}}>
+
                                 <>
                                     <InfoBox>
                                         <Option storeData={this.state.storeData}/>
@@ -254,10 +256,12 @@ class StoreScreen extends React.Component {
                                         </TouchableWithoutFeedback>
                                     </View>*/}
                                 </>
-                                : <Loading/>
-                            }
-                        </ScrollView>
-                    </View>
+
+                            </ScrollView>
+                        </View>
+                        : <Loading/>
+                    }
+
                 </Content>
             </Container>
         );

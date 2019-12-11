@@ -10,12 +10,20 @@ import React from 'react';
 import {Root} from 'native-base';
 
 import Components from './src/components';
+import SplashScreen from 'react-native-splash-screen';
+
 const App = () => {
-  return (
-      <Root>
-        <Components/>
-      </Root>
-  );
+    const splashScreen = () => {
+        setTimeout(() => {
+            SplashScreen.hide();
+        }, 250);
+    };
+    splashScreen();
+    return (
+        <Root>
+            <Components/>
+        </Root>
+    );
 };
 
 export default App;

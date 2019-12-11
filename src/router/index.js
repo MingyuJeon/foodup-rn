@@ -62,12 +62,12 @@ const AppNavigator = createStackNavigator({
     swipeEnabled: false,
     animationEnabled: false,
     lazy: true,
-    transitionConfig: () => ({
+    /*transitionConfig: () => ({
         transitionSpec: {
             duration: 0,
         },
-    }),
-    // transitionConfig: dynamicModalTransition
+    }),*/
+    transitionConfig: dynamicModalTransition
 });
 
 const App = createAppContainer(AppNavigator)

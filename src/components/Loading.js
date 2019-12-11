@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import LottieView from "lottie-react-native";
-import loadingAnimation from '../../assets/animation/loading'
+import loadingAnimation from '../../assets/animation/loading2'
 //TODO: here design => border를 따로 줘야됨 디자인쪽에
 const Loading = () => {
     return (

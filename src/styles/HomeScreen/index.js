@@ -26,8 +26,6 @@ const homeStyles = EStyleSheet.create({
     // CategoryImage.js
     categoryImageListScrollView: {
         backgroundColor: 'transparent',
-        // paddingLeft: 10,
-        // paddingRight: 10,
     },
     categoryImageListContainer: {
         flexDirection: 'row',
