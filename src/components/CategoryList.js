@@ -1,19 +1,20 @@
 import React from 'react';
-import {View, ScrollView, Text, TouchableWithoutFeedback} from 'react-native';
+import {View, ScrollView, Text} from 'react-native';
 import CategoryImage from './CategoryImage';
 import FastImage from 'react-native-fast-image';
 import homeStyles from '../styles/HomeScreen';
+import TouchableScale from 'react-native-touchable-scale';
 
-const CategoryList = ({categories, goCategory, navigation}) => {
+const CategoryList = ({categories, navigation}) => {
 
     return (
         <View style={{height: '70%', top: '15%', zIndex: 2}}>
             <ScrollView showsVerticalScrollIndicator={false} style={ homeStyles.categoryImageListScrollView }>
                 <View style={homeStyles.categoryImageListContainer}>
-                    {categories.map((category, i) => <CategoryImage key={`${category.name}-${i}`} name={category.name} uri={category.url} goCategory={goCategory}/>)}
+                    {categories.map((category, i) => <CategoryImage key={`${category.name}-${i}`} name={category.name} uri={category.url} navigation={navigation}/>)}
                     {
                         categories.length > 0 ?
-                            <TouchableWithoutFeedback onPress={() => navigation.push('CustomerService')}>
+                            <TouchableScale onPress={() => navigation.push('CustomerService')} activeScale={0.9}>
                                 <View style={homeStyles.categoryImageCard}>
                                     <FastImage
                                         resizeMode={FastImage.resizeMode.contain}
@@ -25,7 +26,7 @@ const CategoryList = ({categories, goCategory, navigation}) => {
                                     />
                                     <Text allowFontScaling={false} style={{textAlign: 'center', fontFamily: 'ThecircleB'}}>고객센터</Text>
                                 </View>
-                            </TouchableWithoutFeedback>
+                            </TouchableScale>
                             : null
                     }
                 </View>

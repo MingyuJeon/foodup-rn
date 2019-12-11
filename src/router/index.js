@@ -9,7 +9,7 @@ import CustomerServiceScreen from '../screens/CustomerServiceScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import StoreScreen from '../screens/StoreScreen';
 import ImageGalleryScreen from '../screens/ImageGalleryScreen';
-
+import Test from '../screens/test'
 const IOS_MODAL_ROUTES = ['OptionsScreen'];
 
 let dynamicModalTransition = (transitionProps, prevTransitionProps) => {
@@ -54,6 +54,9 @@ const AppNavigator = createStackNavigator({
     ImageGallery: {
         screen: ImageGalleryScreen
     },
+    Test: {
+        screen: Test
+    }
 },{
     initialRouteName: 'Home',
     swipeEnabled: false,

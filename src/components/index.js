@@ -4,9 +4,10 @@ import SplashScreen from 'react-native-splash-screen';
 
 export default class Components extends Component {
     componentDidMount() {
-        setTimeout(() => {
+        SplashScreen.hide();
+        /*setTimeout(() => {
             SplashScreen.hide();
-        }, 250);
+        }, 250);*/
     }
 
     render() {

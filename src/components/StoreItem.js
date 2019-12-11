@@ -4,6 +4,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import StoreImg from './StoreImg';
 import StoreInfoBlock from './StoreInfoBlock';
 import Medal from './Medal';
+import TouchableScale from 'react-native-touchable-scale';
 
 const StoreItem = ({i, store, featuredStoreInfo, onClickLike, category, from, goToStoreScreen, flag}) => {
     const renderMedal = () => {
@@ -15,22 +16,23 @@ const StoreItem = ({i, store, featuredStoreInfo, onClickLike, category, from, go
     };
 
     let temp = store.hasOwnProperty('thumb') ? store.thumb.best[0] : (store.hasOwnProperty('normalPhotoList') ? store.normalPhotoList[0] : store.specialImg);
-
     return (
-        <View style={styles.container}>
-            {store.hasOwnProperty('thumb') || store.hasOwnProperty('specialImg') && from !== 'Favorite' ? renderMedal() : null }
-            <StoreImg specialImg={temp}/>
-            <StoreInfoBlock
-                i={i}
-                store={store}
-                goToStoreScreen={() => goToStoreScreen(store)}
-                featuredStoreInfo={featuredStoreInfo}
-                onClickLike={() => onClickLike(i)}
-                category={category}
-                from={from}
-                flag={flag}
-            />
-        </View>
+        <TouchableScale onPress={() => goToStoreScreen(store)} activeScale={0.95}>
+            <View style={styles.container}>
+                {store.hasOwnProperty('thumb') || store.hasOwnProperty('specialImg') && from !== 'Favorite' ? renderMedal() : null }
+                <StoreImg specialImg={temp}/>
+                <StoreInfoBlock
+                    i={i}
+                    store={store}
+                    goToStoreScreen={() => goToStoreScreen(store)}
+                    featuredStoreInfo={featuredStoreInfo}
+                    onClickLike={() => onClickLike(i)}
+                    category={category}
+                    from={from}
+                    flag={flag}
+                />
+            </View>
+        </TouchableScale>
     );
 };
 

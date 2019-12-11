@@ -40,7 +40,7 @@ class ImageGalleryScreen extends React.Component {
     render() {
         return (
             <Container style={{backgroundColor: '#000'}}>
-                <GeneralHeader navigation={this.props.navigation}/>
+                <GeneralHeader flag={true} navigation={this.props.navigation}/>
                 <Content contentContainerStyle={{flex: 1, height: '100%', backgroundColor: '#000'}}>
                     {
                         this.state.images.length ?

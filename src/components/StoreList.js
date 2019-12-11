@@ -11,13 +11,9 @@ import favoriteStyles from '../styles/FavoriteScreen';
 
 class StoreList extends React.Component {
     _timeOut;
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            scrollPosition: 0,
-        };
-    }
+    state = {
+        scrollPosition: 0,
+    };
 
     componentDidMount(): void {
         this.flatList = React.createRef();
@@ -96,14 +92,15 @@ class StoreList extends React.Component {
                         </ImageBackground>
                 }
                 { this.props.stores.length ? this.renderStoreList() :
-                    <View style={{flex: 1, padding: 30, justifyContent:'center', alignItems: 'center'}}>
+                    /*<View style={{flex: 1, padding: 30, justifyContent:'center', alignItems: 'center'}}>
                         <FastImage
                             resizeMode={FastImage.resizeMode.contain}
                             style={{width: '70%', height: '70%'}}
                             source={empty}
                         />
                         <Text allowFontScaling={false} style={favoriteStyles.txt}>아직 추가된 맛집 리스트가 없어요.</Text>
-                    </View>
+                    </View>*/
+                    <Loading/>
                 }
             </View>
         );

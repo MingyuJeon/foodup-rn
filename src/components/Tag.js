@@ -1,13 +1,15 @@
 import React from 'react';
-import {View, TouchableWithoutFeedback, Text} from 'react-native';
+import {View, Text} from 'react-native';
 import storeStyles from '../styles/StoreScreen';
+import TouchableScale from 'react-native-touchable-scale';
+
 const Tag = ({tag, goToCategory, from}) => {
     return (
-        <TouchableWithoutFeedback onPress={() => goToCategory(tag)}>
+        <TouchableScale onPress={() => goToCategory(tag)} activeScale={0.9}>
             <View style={storeStyles.tagContainer}>
                 <Text allowFontScaling={false} style={storeStyles.tag}>{tag}</Text>
             </View>
-        </TouchableWithoutFeedback>
+        </TouchableScale>
     );
 };
 

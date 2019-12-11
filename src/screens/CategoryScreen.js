@@ -30,7 +30,7 @@ class CategoryScreen extends React.Component {
     categoryName;
 
     componentDidMount(): void {
-        NetInfo.fetch().then(state => {
+        /*NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 Alert.alert(
                     '알림',
@@ -43,7 +43,9 @@ class CategoryScreen extends React.Component {
                 this.categoryName = this.props.navigation.getParam('categoryName');
                 this.fetchStores();
             }
-        });
+        });*/
+        this.categoryName = this.props.navigation.getParam('categoryName');
+        this.fetchStores();
     }
 
     fetchStores = async () => {
@@ -102,7 +104,7 @@ class CategoryScreen extends React.Component {
     render() {
         return (
             <Container>
-                <GeneralHeader navigation={this.props.navigation}/>
+                <GeneralHeader navigation={this.props.navigation} categoryName={this.categoryName}/>
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
                     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
                         <>
@@ -113,6 +115,7 @@ class CategoryScreen extends React.Component {
                                     <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.categoryName}</Text>
                                 </View>
                             </View>
+                            {/* 얘가 느려지게 하는 주범 */}
                             {
                                 this.categoryName && this.state.categoryInfo ?
                                     <StoreList

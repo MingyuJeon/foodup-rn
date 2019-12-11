@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar} from 'react-native';
+import {StatusBar, Text} from 'react-native';
 import globalStyles from '../styles';
 import {Body, Button, Header, Left, Right} from 'native-base';
 import FastImage from 'react-native-fast-image';
@@ -29,10 +29,14 @@ class GeneralHeader extends React.PureComponent {
                             style={globalStyles.btn}
                             onPress={() => this.props.navigation.navigate('Home')}
                         >
+                            {/*{
+                                this.props.categoryName? <Text style={{color: '#fff'}}>{this.props.categoryName}</Text>:*/}
                             <FastImage resizeMode={FastImage.resizeMode.contain}
                                        style={globalStyles.logoSize}
                                        source={require('../../assets/Foodup_icons/logo.png')}/>
+                            {/*}*/}
                         </Button>
+
                     </Body>
                     {
                         this.props?.flag ? <Right/> :

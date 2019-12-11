@@ -22,6 +22,8 @@ import debounce from 'lodash.debounce';
 import NetInfo from '@react-native-community/netinfo';
 import {check, PERMISSIONS, RESULTS} from 'react-native-permissions';
 
+import {InteractionManager} from 'react-native';
+
 class StoreScreen extends React.Component {
     static navigationOptions = {header: null};
 
@@ -40,20 +42,24 @@ class StoreScreen extends React.Component {
     }
 
     componentDidMount(): void {
-        NetInfo.fetch().then(state => {
-            if (!state.isConnected) {
-                Alert.alert(
-                    '알림',
-                    '"FoodUp"은 인터넷에 연결되어 있는 환경에서 이용할 수 있습니다.',
-                    [
-                        {text: '확인'},
-                    ],
-                );
-            } else {
-                this.getStoreName();
-                this.getCurrentPosition();
-            }
+        InteractionManager.runAfterInteractions(() => {
+
+            NetInfo.fetch().then(state => {
+                if (!state.isConnected) {
+                    Alert.alert(
+                        '알림',
+                        '"FoodUp"은 인터넷에 연결되어 있는 환경에서 이용할 수 있습니다.',
+                        [
+                            {text: '확인'},
+                        ],
+                    );
+                } else {
+                    this.getStoreName();
+                    this.getCurrentPosition();
+                }
+            });
         });
+
 
         /*check(PERMISSIONS.IOS.LOCATION_ALWAYS || PERMISSIONS.IOS.LOCATION_WHEN_IN_USE ||PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION)
             .then(result => {
@@ -82,7 +88,7 @@ class StoreScreen extends React.Component {
     }
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
-        if (prevState.storeName !== this.state.storeName || prevState.triggerFunc !== this.state.triggerFunc ) {
+        if (prevState.storeName !== this.state.storeName || prevState.triggerFunc !== this.state.triggerFunc) {
             this.fetchStoreInfo();
         }
     }
@@ -138,8 +144,8 @@ class StoreScreen extends React.Component {
             source: this.state.region,
             destination: this.state.storeRegion,
         };
-        if(!this.state.region) {
-            alert('현재위치 정보 수집을 허용해주세요.')
+        if (!this.state.region) {
+            alert('현재위치 정보 수집을 허용해주세요.');
         } else {
             Linking.openURL(`https://www.google.com/maps/dir/?api=1&travelmode=driving&dir_action=navigate&destination=${this.state.storeData.addr} ${this.state.storeData.city} ${this.state.storeData.state} ${this.state.storeData.zipCode}&origin=${data.source.latitude} ${data.source.longitude}`);
         }

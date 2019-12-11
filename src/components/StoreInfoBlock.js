@@ -38,7 +38,6 @@ export default class StoreInfoBlock extends PureComponent {
         return (
             <View style={styles.storeContainer}>
                 <View style={{flex: 1, padding: 13}}>
-                    <TouchableWithoutFeedback onPress={() => this.props.goToStoreScreen(store)}>
                         <View>
                             <Text allowFontScaling={false} style={styles.storeName}>{store.name.length > 15 ? store.name.substring(0, 14) + '...' : store.name}</Text>
                             <Text allowFontScaling={false} style={styles.storeAddr}>{store.addr}</Text>
@@ -54,7 +53,6 @@ export default class StoreInfoBlock extends PureComponent {
                                 : null
                         }
                         </View>
-                    </TouchableWithoutFeedback>
                     {this.voteView()}
                     <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
                         <View style={styles.opt}>

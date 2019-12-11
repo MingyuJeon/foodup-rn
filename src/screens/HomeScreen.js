@@ -35,11 +35,6 @@ class HomeScreen extends Component {
         this.getCategoryInfo();
     }
 
-    // TODO: lodash 이용해서 throttle 적용하기
-    goCategory = debounce((name) => {
-        this.props.navigation.push('Category', {categoryName: name});
-    }, 250);
-
     getCategoryInfo = async () => {
         let categories;
         this.setState({...this.state.categories, fetching: true});

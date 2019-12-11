@@ -1,9 +1,10 @@
 import React from 'react';
-import {Animated, Easing, View, TouchableOpacity} from 'react-native';
+import {Animated, Easing} from 'react-native';
 import LottieView from 'lottie-react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import debounce from 'lodash.debounce';
 import thumbup from '../../assets/animation/thumb-up.json';
+import TouchableScale from 'react-native-touchable-scale';
 
 class ThumbUp extends React.Component {
     constructor(props) {
@@ -48,11 +49,11 @@ class ThumbUp extends React.Component {
 
     render() {
         return (
-            <TouchableOpacity disabled={this.props.flag} onPress={this.voting} style={styles.thumbImg}>
+            <TouchableScale disabled={this.props.flag} onPress={this.voting} style={styles.thumbImg} activeScale={0.9}>
                 {
                     this.renderIcn()
                 }
-            </TouchableOpacity>
+            </TouchableScale>
         );
     }
 }

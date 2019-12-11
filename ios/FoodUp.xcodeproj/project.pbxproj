@@ -8,39 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FoodUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodUpTests.m */; };
-		1044797721E240C5A1744E81 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1E80F63C3E14E2195047477 /* FontAwesome5_Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		17D6B320C2DF4AA5A59A7A46 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D436A99FF8A547B5B1B969E0 /* AntDesign.ttf */; };
 		1CA39C958353ADA794247ED2 /* libPods-FoodUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AEA4BA17DAB13CF0FA8742 /* libPods-FoodUpTests.a */; };
-		1D49D964777446939C687AC6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF27B2D6B9544104814E3966 /* Zocial.ttf */; };
 		1FA5444227DD411AB422183F /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 041FF980D7E14134BD278541 /* Roboto.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* FoodUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodUpTests.m */; };
-		354F710A8B324A478A0DA27B /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7497347CE8114EFFA261B813 /* FontAwesome5_Solid.ttf */; };
-		4C8A9153FA5447778A4726FD /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43E68F7179742F299B9C46B /* Foundation.ttf */; };
-		619DCE6843B44A7EB551CE03 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06A70088DB0549DB8612769D /* Ionicons.ttf */; };
-		6C4D1905972B478DBE25B5AE /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3F2B7D010AC4A53971261C9 /* Feather.ttf */; };
-		7BDEBC58F317444EA988EA89 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC0C78C1965480C8AE61DCE /* Octicons.ttf */; };
-		A1A425C33A5B44CDA9CF9875 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8463539727EB4A3E821C3E43 /* FontAwesome.ttf */; };
-		A221D7FDF24D4CED8776D706 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32224D21F9CB4179BCFA0B27 /* MaterialCommunityIcons.ttf */; };
 		A224633A569D483CB1BBBD3E /* ThecircleB.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6EB9163A4704E64A2FE599C /* ThecircleB.otf */; };
-		A24DDE6B65B9433BB29FFF8A /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F07E8E663AF4B6CB7DE91C8 /* Entypo.ttf */; };
 		A70A2BF0A48A4C52E7C52ACE /* libPods-FoodUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A928E5DAB34C8C076DE29D3 /* libPods-FoodUp.a */; };
-		B68EC1FC89804E208079FACE /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F20B9B52D0A4C77BBBB4E29 /* FontAwesome5_Brands.ttf */; };
 		BC1ED4DD69C44646BD9E6E60 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F371072FA874AABAA2A7029 /* rubicon-icon-font.ttf */; };
 		C37478DC13C2A6D69C48B16B /* libPods-FoodUp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0739C630A8E0E02A659C94 /* libPods-FoodUp-tvOSTests.a */; };
-		C511604A3D904229B6865115 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A094F6594BC483CA5E82567 /* MaterialIcons.ttf */; };
 		C7EB0AA42F6CC1A163F4A345 /* libPods-FoodUp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3B7DCD3BE02A5F6170A42B /* libPods-FoodUp-tvOS.a */; };
-		E4148D310ADC4001B635021A /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798965BD65D240F688A99CE8 /* SimpleLineIcons.ttf */; };
 		EAED7E55239B3C86003910ED /* lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED7E54239B3C86003910ED /* lottie.swift */; };
-		F2144A4F4AB74B6E8E3181C2 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916EB5F0BB80485986BE0552 /* EvilIcons.ttf */; };
 		F54CD72B628D4FF39BD3D85D /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8800F5D4A8DC48F3BDD081E5 /* Roboto_medium.ttf */; };
-		FF3F6B5932544862ADA132F6 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F0862F0E945425ABF0FA21A /* Fontisto.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +50,9 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* FoodUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodUpTests.m; sourceTree = "<group>"; };
 		0125DF9F29786814B5D054A9 /* Pods-FoodUp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-FoodUp-tvOS/Pods-FoodUp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		041FF980D7E14134BD278541 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
-		06A70088DB0549DB8612769D /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		0F07E8E663AF4B6CB7DE91C8 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		041FF980D7E14134BD278541 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		06A70088DB0549DB8612769D /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		0F07E8E663AF4B6CB7DE91C8 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* FoodUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FoodUp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FoodUp/AppDelegate.m; sourceTree = "<group>"; };
@@ -79,31 +63,31 @@
 		14E627B7B971E5457237B75A /* Pods-FoodUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUp.debug.xcconfig"; path = "Target Support Files/Pods-FoodUp/Pods-FoodUp.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* FoodUp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodUp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* FoodUp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodUp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F0862F0E945425ABF0FA21A /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
-		32224D21F9CB4179BCFA0B27 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		2F0862F0E945425ABF0FA21A /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		32224D21F9CB4179BCFA0B27 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		3FBF204D803B9EE378882CED /* Pods-FoodUp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-FoodUp-tvOSTests/Pods-FoodUp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F371072FA874AABAA2A7029 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
+		4F371072FA874AABAA2A7029 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		52ABA8F4CC7A6C984937B688 /* Pods-FoodUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUp.release.xcconfig"; path = "Target Support Files/Pods-FoodUp/Pods-FoodUp.release.xcconfig"; sourceTree = "<group>"; };
 		5B0739C630A8E0E02A659C94 /* libPods-FoodUp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodUp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F20B9B52D0A4C77BBBB4E29 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		6A094F6594BC483CA5E82567 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		5F20B9B52D0A4C77BBBB4E29 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		6A094F6594BC483CA5E82567 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		6C3B7DCD3BE02A5F6170A42B /* libPods-FoodUp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodUp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7497347CE8114EFFA261B813 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		798965BD65D240F688A99CE8 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		7497347CE8114EFFA261B813 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		798965BD65D240F688A99CE8 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		805B54A375BB14E6DF60199B /* Pods-FoodUp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-FoodUp-tvOS/Pods-FoodUp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		8463539727EB4A3E821C3E43 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		8800F5D4A8DC48F3BDD081E5 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		8463539727EB4A3E821C3E43 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
+		8800F5D4A8DC48F3BDD081E5 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		8A928E5DAB34C8C076DE29D3 /* libPods-FoodUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		916EB5F0BB80485986BE0552 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
-		A1E80F63C3E14E2195047477 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
-		A3F2B7D010AC4A53971261C9 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
-		A43E68F7179742F299B9C46B /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		916EB5F0BB80485986BE0552 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		A1E80F63C3E14E2195047477 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		A3F2B7D010AC4A53971261C9 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		A43E68F7179742F299B9C46B /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		B7AEA4BA17DAB13CF0FA8742 /* libPods-FoodUpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodUpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF27B2D6B9544104814E3966 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		CAC0C78C1965480C8AE61DCE /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		BF27B2D6B9544104814E3966 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		CAC0C78C1965480C8AE61DCE /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		D3F01A40FB7849BE4AA84404 /* Pods-FoodUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUpTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodUpTests/Pods-FoodUpTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D436A99FF8A547B5B1B969E0 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		D6EB9163A4704E64A2FE599C /* ThecircleB.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = ThecircleB.otf; path = ../assets/fonts/ThecircleB.otf; sourceTree = "<group>"; };
+		D436A99FF8A547B5B1B969E0 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		D6EB9163A4704E64A2FE599C /* ThecircleB.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = ThecircleB.otf; path = ../assets/fonts/ThecircleB.otf; sourceTree = "<group>"; };
 		E88DAAD546345E7484EBE9D8 /* Pods-FoodUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUpTests.release.xcconfig"; path = "Target Support Files/Pods-FoodUpTests/Pods-FoodUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		EAED7E53239B3C85003910ED /* FoodUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAED7E54239B3C86003910ED /* lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lottie.swift; path = ../../FoodUp/ios/lottie.swift; sourceTree = "<group>"; };
@@ -268,7 +252,6 @@
 				BF27B2D6B9544104814E3966 /* Zocial.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,25 +401,9 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A224633A569D483CB1BBBD3E /* ThecircleB.otf in Resources */,
-				17D6B320C2DF4AA5A59A7A46 /* AntDesign.ttf in Resources */,
-				A24DDE6B65B9433BB29FFF8A /* Entypo.ttf in Resources */,
-				F2144A4F4AB74B6E8E3181C2 /* EvilIcons.ttf in Resources */,
-				6C4D1905972B478DBE25B5AE /* Feather.ttf in Resources */,
-				A1A425C33A5B44CDA9CF9875 /* FontAwesome.ttf in Resources */,
-				B68EC1FC89804E208079FACE /* FontAwesome5_Brands.ttf in Resources */,
-				1044797721E240C5A1744E81 /* FontAwesome5_Regular.ttf in Resources */,
-				354F710A8B324A478A0DA27B /* FontAwesome5_Solid.ttf in Resources */,
-				FF3F6B5932544862ADA132F6 /* Fontisto.ttf in Resources */,
-				4C8A9153FA5447778A4726FD /* Foundation.ttf in Resources */,
-				619DCE6843B44A7EB551CE03 /* Ionicons.ttf in Resources */,
-				A221D7FDF24D4CED8776D706 /* MaterialCommunityIcons.ttf in Resources */,
-				C511604A3D904229B6865115 /* MaterialIcons.ttf in Resources */,
-				7BDEBC58F317444EA988EA89 /* Octicons.ttf in Resources */,
 				F54CD72B628D4FF39BD3D85D /* Roboto_medium.ttf in Resources */,
 				1FA5444227DD411AB422183F /* Roboto.ttf in Resources */,
 				BC1ED4DD69C44646BD9E6E60 /* rubicon-icon-font.ttf in Resources */,
-				E4148D310ADC4001B635021A /* SimpleLineIcons.ttf in Resources */,
-				1D49D964777446939C687AC6 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
