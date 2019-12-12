@@ -3,8 +3,9 @@ import {StatusBar, Text} from 'react-native';
 import globalStyles from '../styles';
 import {Body, Button, Header, Left, Right} from 'native-base';
 import FastImage from 'react-native-fast-image';
-import styles from '../styles/HomeScreen';
+import btnStyles from '../styles/HomeScreen';
 import debounce from 'lodash.debounce';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 class GeneralHeader extends React.PureComponent {
     render() {
@@ -19,7 +20,7 @@ class GeneralHeader extends React.PureComponent {
                             style={globalStyles.btn}
                         >
                             <FastImage resizeMode={FastImage.resizeMode.contain}
-                                       style={styles.headerImg}
+                                       style={btnStyles.headerImg}
                                        source={require('../../assets/Foodup_icons/back.png')}/>
                         </Button>
                     </Left>
@@ -29,12 +30,12 @@ class GeneralHeader extends React.PureComponent {
                             style={globalStyles.btn}
                             onPress={() => this.props.navigation.navigate('Home')}
                         >
-                            {/*{
-                                this.props.categoryName? <Text style={{color: '#fff'}}>{this.props.categoryName}</Text>:*/}
+                            {
+                                this.props.categoryName? <Text style={styles.header}>{this.props.categoryName}</Text>:
                             <FastImage resizeMode={FastImage.resizeMode.contain}
                                        style={globalStyles.logoSize}
                                        source={require('../../assets/Foodup_icons/logo.png')}/>
-                            {/*}*/}
+                            }
                         </Button>
 
                     </Body>
@@ -46,7 +47,7 @@ class GeneralHeader extends React.PureComponent {
                                         style={globalStyles.btn}
                                 >
                                     <FastImage
-                                        style={styles.headerImg}
+                                        style={btnStyles.headerImg}
                                         resizeMode={FastImage.resizeMode.contain}
                                         source={require('../../assets/Foodup_icons/search.png')}/>
                                 </Button>
@@ -57,5 +58,9 @@ class GeneralHeader extends React.PureComponent {
         );
     }
 };
+
+const styles = EStyleSheet.create({
+    header: {fontSize: '1.5rem', color: '#fff', fontFamily: '$font'}
+});
 
 export default GeneralHeader;

@@ -3,14 +3,14 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 const homeStyles = EStyleSheet.create({
     // HomeScreen.js
     TextContainer: {
-        height: '35%',
+        // height: '35%',
         width: '100%',
         backgroundColor: '$themeColor',
         paddingLeft: 30,
         paddingBottom: 20,
         paddingTop: 20,
         top: 0,
-        position: 'absolute',
+        // position: 'absolute',
         zIndex: 1,
     },
     TextStr: {
@@ -25,7 +25,8 @@ const homeStyles = EStyleSheet.create({
 
     // CategoryImage.js
     categoryImageListScrollView: {
-        backgroundColor: 'transparent',
+        // backgroundColor: 'transparent',
+        width: '100%',
     },
     categoryImageListContainer: {
         flexDirection: 'row',

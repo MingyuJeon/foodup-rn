@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, PermissionsAndroid, Text, View} from 'react-native';
+import {Alert, PermissionsAndroid, ScrollView, Text, View} from 'react-native';
 import {Container, Content} from 'native-base';
 import homeStyles from '../styles/HomeScreen';
 import globalStyles from '../styles';
@@ -9,6 +9,7 @@ import HomeScreenHeader from '../components/HomeScreenHeader';
 import Loading from '../components/Loading';
 import debounce from 'lodash.debounce';
 import NetInfo from '@react-native-community/netinfo';
+
 // import AsyncStorage from '@react-native-community/async-storage';
 
 class HomeScreen extends Component {
@@ -21,7 +22,7 @@ class HomeScreen extends Component {
     componentDidMount() {
         // AsyncStorage.clear()
         NetInfo.fetch().then(state => {
-            if(!state.isConnected) {
+            if (!state.isConnected) {
                 Alert.alert(
                     '알림',
                     '"FoodUp"은 인터넷에 연결되어 있는 환경에서 이용할 수 있습니다.',
@@ -51,18 +52,21 @@ class HomeScreen extends Component {
             <Container>
                 <HomeScreenHeader navigation={this.props.navigation}/>
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
-                    <View style={homeStyles.TextContainer}>
-                        <Text style={homeStyles.TextStr} allowFontScaling={false}>아,</Text>
-                        <Text style={homeStyles.TextStr} allowFontScaling={false}>오늘은</Text>
-                        <Text style={homeStyles.TextStr} allowFontScaling={false}>또 뭘 먹지?</Text>
-                    </View>
                     {
                         this.state.categories.length > 0 ?
-                            <CategoryList
-                                categories={this.state.categories}
-                                goCategory={this.goCategory}
-                                navigation={this.props.navigation}
-                            />
+                            <ScrollView showsVerticalScrollIndicator={false} style={homeStyles.categoryImageListScrollView} bounces={false}>
+                                <View style={homeStyles.TextContainer}>
+                                    <Text style={homeStyles.TextStr} allowFontScaling={false}>아,</Text>
+                                    <Text style={homeStyles.TextStr} allowFontScaling={false}>오늘은</Text>
+                                    <Text style={homeStyles.TextStr} allowFontScaling={false}>또 뭘 먹지?</Text>
+                                </View>
+
+                                <CategoryList
+                                    categories={this.state.categories}
+                                    goCategory={this.goCategory}
+                                    navigation={this.props.navigation}
+                                />
+                            </ScrollView>
                             :
                             <Loading/>
                     }

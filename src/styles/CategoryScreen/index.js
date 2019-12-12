@@ -6,8 +6,8 @@ const categoryStyles = EStyleSheet.create({
         backgroundColor: '$themeColor',
         paddingLeft: 10,
         paddingBottom: 20,
-        // paddingTop: 20,
-        height: 140,
+        paddingTop: 20,
+        flex: 1,
         flexDirection: 'row',
     },
     categoryImage: {

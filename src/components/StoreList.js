@@ -4,6 +4,8 @@ import StoreItem from './StoreItem';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Loading from '../components/Loading';
 import debounce from 'lodash.debounce';
+import categoryStyles from '../styles/CategoryScreen';
+import FeaturedCategoryImage from './FeaturedCategoryImage';
 
 class StoreList extends React.Component {
     _timeOut;
@@ -59,6 +61,7 @@ class StoreList extends React.Component {
 
         return (
             <FlatList
+                bounces={false}
                 ref={this.flatList}
                 onScroll={this.handleScroll}
                 showsVerticalScrollIndicator={false}
@@ -73,10 +76,19 @@ class StoreList extends React.Component {
                 }}
                 ListHeaderComponent={
                     this.props.from ? null :
+                        <>
+                        <View style={categoryStyles.textContainer}>
+                            <FeaturedCategoryImage categoryInfo={this.props.categoryInfo}/>
+                            <View style={{flexDirection: 'column', alignSelf: 'center', flex: 1}}>
+                                <Text allowFontScaling={false} style={categoryStyles.subTitle}>푸드업랭킹</Text>
+                                <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.props.category}</Text>
+                            </View>
+                        </View>
                         <View style={{backgroundColor: '#F2F2F2', borderRadius: 10, padding: 9, margin: 5}}>
                             <Text allowFontScaling={false} style={styles.bubble}>나의 최고의 {this.props.category} 맛집은 어디?</Text>
                             <Text allowFontScaling={false} style={styles.bubble}>따봉을 눌러서 UP UP!</Text>
                         </View>
+                            </>
                 }
             />
         );
@@ -103,7 +115,7 @@ const styles = EStyleSheet.create({
         backgroundColor: 'white',
         borderTopStartRadius: 15,
         borderTopEndRadius: 15,
-        padding: 10,
+        // padding: 10,
         marginTop: -10,
         flex: 1,
     },

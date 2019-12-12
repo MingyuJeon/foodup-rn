@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 import storeStyles from '../styles/StoreScreen';
 import TouchableScale from 'react-native-touchable-scale';
 
-const Tag = ({tag, goToCategory, from}) => {
+const Tag = ({tag, goToCategory}) => {
     return (
         <TouchableScale onPress={() => goToCategory(tag)} activeScale={0.9}>
             <View style={storeStyles.tagContainer}>

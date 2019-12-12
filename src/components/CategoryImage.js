@@ -11,10 +11,8 @@ const CategoryImage = (props) => {
     return (
         <TouchableScale
             hitSlop={{top: 7, right: 7, bottom: 7, left: 7}}
-            // activeOpacity={.5}
             onPress={debounce(() => props.navigation.push('Category', {categoryName: name}), 140)}
-            // onPress={() => props.navigation.push('Test', {categoryName: name})}
-            activeScale={0.8}
+            activeScale={0.95}
         >
             <View style={homeStyles.categoryImageCard}>
                 <FastImage

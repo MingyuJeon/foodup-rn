@@ -8,13 +8,13 @@ import TouchableScale from 'react-native-touchable-scale';
 const CategoryList = ({categories, navigation}) => {
 
     return (
-        <View style={{height: '70%', top: '15%', zIndex: 2}}>
-            <ScrollView showsVerticalScrollIndicator={false} style={ homeStyles.categoryImageListScrollView }>
+        <View style={{bottom: 20, zIndex: 2, alignSelf: 'center'}}>
+            {/*<ScrollView showsVerticalScrollIndicator={false} style={ homeStyles.categoryImageListScrollView }>*/}
                 <View style={homeStyles.categoryImageListContainer}>
                     {categories.map((category, i) => <CategoryImage key={`${category.name}-${i}`} name={category.name} uri={category.url} navigation={navigation}/>)}
                     {
                         categories.length > 0 ?
-                            <TouchableScale onPress={() => navigation.push('CustomerService')} activeScale={0.9}>
+                            <TouchableScale onPress={() => navigation.push('CustomerService')} activeScale={0.95}>
                                 <View style={homeStyles.categoryImageCard}>
                                     <FastImage
                                         resizeMode={FastImage.resizeMode.contain}
@@ -30,7 +30,7 @@ const CategoryList = ({categories, navigation}) => {
                             : null
                     }
                 </View>
-            </ScrollView>
+            {/*</ScrollView>*/}
         </View>
     );
 };
