@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import debounce from 'lodash.debounce';
 import categoryStyles from '../styles/CategoryScreen';
 import FeaturedCategoryImage from './FeaturedCategoryImage';
+import Icon from 'react-native-vector-icons/Entypo';
 
 class StoreList extends React.Component {
     _timeOut;
@@ -75,20 +76,29 @@ class StoreList extends React.Component {
                     return i.toString();
                 }}
                 ListHeaderComponent={
-                    this.props.from ? null :
-                        <>
+                    this.props.from ?
                         <View style={categoryStyles.textContainer}>
-                            <FeaturedCategoryImage categoryInfo={this.props.categoryInfo}/>
-                            <View style={{flexDirection: 'column', alignSelf: 'center', flex: 1}}>
-                                <Text allowFontScaling={false} style={categoryStyles.subTitle}>푸드업랭킹</Text>
-                                <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.props.category}</Text>
+                            <View style={{flexDirection: 'column', alignSelf: 'center'}}>
+                                <Icon name="heart" size={30} color="#fff" style={{paddingLeft: 10}}/>
+
+                                <Text allowFontScaling={false} style={[categoryStyles.categoryNameTitle, {fontSize: 35}]}>나만의</Text>
+                                <Text allowFontScaling={false} style={[categoryStyles.categoryNameTitle, {fontSize: 35}]}>#맛집 컬렉션</Text>
                             </View>
                         </View>
-                        <View style={{backgroundColor: '#F2F2F2', borderRadius: 10, padding: 9, margin: 5}}>
-                            <Text allowFontScaling={false} style={styles.bubble}>나의 최고의 {this.props.category} 맛집은 어디?</Text>
-                            <Text allowFontScaling={false} style={styles.bubble}>따봉을 눌러서 UP UP!</Text>
-                        </View>
-                            </>
+                        :
+                        <>
+                            <View style={categoryStyles.textContainer}>
+                                <FeaturedCategoryImage categoryInfo={this.props.categoryInfo}/>
+                                <View style={{flexDirection: 'column', alignSelf: 'center', flex: 1}}>
+                                    <Text allowFontScaling={false} style={categoryStyles.subTitle}>푸드업랭킹</Text>
+                                    <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.props.category}</Text>
+                                </View>
+                            </View>
+                            <View style={{backgroundColor: '#F2F2F2', borderRadius: 10, padding: 9, margin: 5}}>
+                                <Text allowFontScaling={false} style={styles.bubble}>나의 최고의 {this.props.category} 맛집은 어디?</Text>
+                                <Text allowFontScaling={false} style={styles.bubble}>따봉을 눌러서 UP UP!</Text>
+                            </View>
+                        </>
                 }
             />
         );

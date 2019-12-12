@@ -64,14 +64,6 @@ class FavoriteScreen extends React.Component {
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
                     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
-                        <View style={categoryStyles.textContainer}>
-                            <View style={{flexDirection: 'column', alignSelf: 'center'}}>
-                                <Icon name="heart" size={30} color="#fff" style={{paddingLeft: 10}}/>
-
-                                <Text allowFontScaling={false} style={[categoryStyles.categoryNameTitle, {fontSize: 35}]}>나만의</Text>
-                                <Text allowFontScaling={false} style={[categoryStyles.categoryNameTitle, {fontSize: 35}]}>#맛집 컬렉션</Text>
-                            </View>
-                        </View>
                         {this.state?.stores?.length ?
                             <StoreList
                                 featuredStoreInfo={false}

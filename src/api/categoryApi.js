@@ -6,8 +6,10 @@ export const fetchCategories = async () => {
     try {
         return await categoryRef
             .where('isFeaturedCategory', '==', true)
+            .orderBy('weight', 'asc')
             .get()
             .then(async res => await res.docs.map(x => x.data()));
+
     } catch (e) {
         console.log(e);
     }
