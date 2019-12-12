@@ -13,8 +13,7 @@ import Components from './src/components';
 import SplashScreen from "react-native-splash-screen";
 
 class App extends React.Component {
-    constructor() {
-        super();
+    componentDidMount() {
         SplashScreen.hide();
     }
     render() {

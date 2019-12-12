@@ -9,7 +9,6 @@ const CategoryList = ({categories, navigation}) => {
 
     return (
         <View style={{bottom: 20, zIndex: 2, alignSelf: 'center'}}>
-            {/*<ScrollView showsVerticalScrollIndicator={false} style={ homeStyles.categoryImageListScrollView }>*/}
                 <View style={homeStyles.categoryImageListContainer}>
                     {categories.map((category, i) => <CategoryImage key={`${category.name}-${i}`} name={category.name} uri={category.url} navigation={navigation}/>)}
                     {
