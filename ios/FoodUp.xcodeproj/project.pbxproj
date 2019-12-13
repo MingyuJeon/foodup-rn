@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* FoodUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FoodUpTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1CA39C958353ADA794247ED2 /* libPods-FoodUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7AEA4BA17DAB13CF0FA8742 /* libPods-FoodUpTests.a */; };
@@ -23,6 +22,7 @@
 		BC1ED4DD69C44646BD9E6E60 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F371072FA874AABAA2A7029 /* rubicon-icon-font.ttf */; };
 		C37478DC13C2A6D69C48B16B /* libPods-FoodUp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0739C630A8E0E02A659C94 /* libPods-FoodUp-tvOSTests.a */; };
 		C7EB0AA42F6CC1A163F4A345 /* libPods-FoodUp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3B7DCD3BE02A5F6170A42B /* libPods-FoodUp-tvOS.a */; };
+		EAB4D3BB23A304DF00BDBB76 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB4D3BA23A304DF00BDBB76 /* Launch Screen.storyboard */; };
 		EAED7E55239B3C86003910ED /* lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED7E54239B3C86003910ED /* lottie.swift */; };
 		F54CD72B628D4FF39BD3D85D /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8800F5D4A8DC48F3BDD081E5 /* Roboto_medium.ttf */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,6 @@
 		13B07F961A680F5B00A75B9A /* FoodUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FoodUp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FoodUp/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FoodUp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FoodUp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FoodUp/main.m; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		D436A99FF8A547B5B1B969E0 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		D6EB9163A4704E64A2FE599C /* ThecircleB.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = ThecircleB.otf; path = ../assets/fonts/ThecircleB.otf; sourceTree = "<group>"; };
 		E88DAAD546345E7484EBE9D8 /* Pods-FoodUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodUpTests.release.xcconfig"; path = "Target Support Files/Pods-FoodUpTests/Pods-FoodUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		EAB4D3BA23A304DF00BDBB76 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EAED7E53239B3C85003910ED /* FoodUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAED7E54239B3C86003910ED /* lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = lottie.swift; path = ../../FoodUp/ios/lottie.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -157,10 +157,10 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				EAED7E54239B3C86003910ED /* lottie.swift */,
 				EAED7E53239B3C85003910ED /* FoodUp-Bridging-Header.h */,
+				EAB4D3BA23A304DF00BDBB76 /* Launch Screen.storyboard */,
 			);
 			name = FoodUp;
 			sourceTree = "<group>";
@@ -399,11 +399,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A224633A569D483CB1BBBD3E /* ThecircleB.otf in Resources */,
 				F54CD72B628D4FF39BD3D85D /* Roboto_medium.ttf in Resources */,
 				1FA5444227DD411AB422183F /* Roboto.ttf in Resources */,
 				BC1ED4DD69C44646BD9E6E60 /* rubicon-icon-font.ttf in Resources */,
+				EAB4D3BB23A304DF00BDBB76 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,18 +680,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = FoodUp;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -744,7 +732,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = W73P527ZL6;
 				INFOPLIST_FILE = FoodUp/Info.plist;
@@ -770,7 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_TEAM = W73P527ZL6;
 				INFOPLIST_FILE = FoodUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -38,7 +38,7 @@ class StoreList extends React.Component {
         const flag = likes ? !!likes[store.item.name] : false;
 
         return (
-            <View style={{padding: 5, paddingBottom: 10}}>
+            <View style={{paddingLeft: 15, paddingRight: 15, paddingTop: 5, paddingBottom: 10}}>
                 <StoreItem
                     i={store.index}
                     store={store.item}
@@ -94,7 +94,7 @@ class StoreList extends React.Component {
                                     <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.props.category}</Text>
                                 </View>
                             </View>
-                            <View style={{backgroundColor: '#F2F2F2', borderRadius: 10, padding: 9, margin: 5}}>
+                            <View style={{backgroundColor: '#F2F2F2', borderRadius: 10, padding: 9, margin: 15}}>
                                 <Text allowFontScaling={false} style={styles.bubble}>나의 최고의 {this.props.category} 맛집은 어디?</Text>
                                 <Text allowFontScaling={false} style={styles.bubble}>따봉을 눌러서 UP UP!</Text>
                             </View>
