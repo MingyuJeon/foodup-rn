@@ -38,16 +38,16 @@ class StoreScreenHeader extends React.Component {
         const res = JSON.parse(data);
         if (res !== null) {
             this.setState(prevState => ({...this.state, favoriteStores: [...prevState.favoriteStores, ...res]}));
-            res.find(store => store.name === this.props.storeData.name) ? this.setState({...this.state, favorite: true}) : null; // favorite에 존재하면 하트 채우기 없으면 아무것도 안함
+            res.find(store => store.id === this.props.storeData.id) ? this.setState({...this.state, favorite: true}) : null; // favorite에 존재하면 하트 채우기 없으면 아무것도 안함
         }
     };
 
     onClickFavorite = debounce(async () => {
         if (this.state.favorite) {
-            AsyncStorage.removeItem(`${this.props.storeData.name}`)
+            AsyncStorage.removeItem(`${this.props.storeData.id}`)
             this.setState(prevState => ({
                 favorite: !prevState.favorite,
-                favoriteStores: [...prevState.favoriteStores.filter((store) => store.name !== this.props.storeData.name)]
+                favoriteStores: [...prevState.favoriteStores.filter((store) => store.id !== this.props.storeData.id)]
             }));
 
             Alert.alert(
@@ -60,7 +60,7 @@ class StoreScreenHeader extends React.Component {
         } else {
             this.setState(prevState => ({
                 favorite: !prevState.favorite,
-                favoriteStores: [...prevState.favoriteStores, this.props.storeData],
+                favoriteStores: [...prevState.favoriteStores, this.props.storeData.id],
             }));
             Alert.alert(
                 '알림',

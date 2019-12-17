@@ -10,6 +10,14 @@ export const fetchStore = async (name) => {
     }
 };
 
+export const fetchIdStore = async (id) => {
+    try {
+        return await storeRef.where('id', '==', id).get().then(res => res.docs.map(store => store.data())[0]);
+    } catch (e) {
+        console.log(e);
+    }
+}
+
 export const voteDocRef = async (storeName, categoryName) => {
     const ref = await db.collection(`categories/${categoryName}/relatedStore`).doc(`${storeName}`);
     return db.runTransaction(transaction => {

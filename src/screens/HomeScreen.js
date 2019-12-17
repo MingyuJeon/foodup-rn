@@ -48,7 +48,6 @@ class HomeScreen extends Component {
     };
 
     render() {
-        console.log(this.state);
         return (
             <Container>
                 <HomeScreenHeader navigation={this.props.navigation}/>

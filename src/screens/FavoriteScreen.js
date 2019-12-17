@@ -7,13 +7,13 @@ import AsyncStorage from '@react-native-community/async-storage';
 import StoreList from '../components/StoreList';
 import retrieveStores from '../modules/retrieveStores';
 import {fetchMore} from '../api/categoryApi';
-import categoryStyles from '../styles/CategoryScreen';
 import debounce from 'lodash.debounce';
 import FastImage from 'react-native-fast-image';
 import empty from '../../assets/Foodup_icons/favorite_empty.png';
 import favoriteStyles from '../styles/FavoriteScreen';
-import Icon from 'react-native-vector-icons/Entypo';
 import NetInfo from '@react-native-community/netinfo';
+import {fetchIdStore} from '../api/storeApi';
+import Loading from '../components/Loading';
 
 class FavoriteScreen extends React.Component {
     static navigationOptions = {header: null};
@@ -21,6 +21,7 @@ class FavoriteScreen extends React.Component {
     state = {
         stores: [],
         fetch: false,
+        noData: false,
     };
 
     componentDidMount(): void {
@@ -39,9 +40,23 @@ class FavoriteScreen extends React.Component {
         });
     }
 
+    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
+        if(prevState.stores !== this.state.stores) {
+            this.setState({...this.state, fetch: false, noData: false});
+        }
+    }
+
     getFavoriteStores = async () => {
+        this.setState({...this.state, fetch: true});
         const stores = JSON.parse(await AsyncStorage.getItem('favorite'));
-        this.setState({stores});
+        const storeInfo = [];
+
+        for (let id of stores) {
+            storeInfo.push(await fetchIdStore(id));
+        }
+        this.setState({...this.state, stores: storeInfo});
+
+        console.log(this.state);
     };
 
     retrieveMore = async (nativeEvent) => {
@@ -59,12 +74,13 @@ class FavoriteScreen extends React.Component {
     }, 250);
 
     render() {
+        console.log('here');
         return (
             <Container>
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
                     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
-                        {this.state?.stores?.length ?
+                        {this.state.fetch ? <Loading /> :
                             <StoreList
                                 featuredStoreInfo={false}
                                 fetch={this.state.fetch}
@@ -74,15 +90,18 @@ class FavoriteScreen extends React.Component {
                                 moveToStoreScreen={this.moveToStoreScreen}
                                 category={this.categoryName}
                                 from={'Favorite'}
-                            /> :
-                            <View style={{flex: 1, padding: 30, justifyContent:'center', alignItems: 'center'}}>
-                                <FastImage
-                                    resizeMode={FastImage.resizeMode.contain}
-                                    style={{width: '70%', height: '70%'}}
-                                    source={empty}
-                                />
-                                <Text allowFontScaling={false} style={favoriteStyles.txt}>아직 추가된 맛집 리스트가 없어요.</Text>
-                            </View>
+                            />
+                        }
+                        {
+                            this.state.noData ?
+                                <View style={{flex: 1, padding: 30, justifyContent:'center', alignItems: 'center'}}>
+                                    <FastImage
+                                        resizeMode={FastImage.resizeMode.contain}
+                                        style={{width: '70%', height: '70%'}}
+                                        source={empty}
+                                    />
+                                    <Text allowFontScaling={false} style={favoriteStyles.txt}>아직 추가된 맛집 리스트가 없어요.</Text>
+                                </View> : null
                         }
                     </View>
                 </Content>
