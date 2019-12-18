@@ -38,7 +38,7 @@ class StoreScreenHeader extends React.Component {
         const res = JSON.parse(data);
         if (res !== null) {
             this.setState(prevState => ({...this.state, favoriteStores: [...prevState.favoriteStores, ...res]}));
-            res.find(store => store.id === this.props.storeData.id) ? this.setState({...this.state, favorite: true}) : null; // favorite에 존재하면 하트 채우기 없으면 아무것도 안함
+            res.find(id => id === this.props.storeData.id) ? this.setState({...this.state, favorite: true}) : null; // favorite에 존재하면 하트 채우기 없으면 아무것도 안함
         }
     };
 
