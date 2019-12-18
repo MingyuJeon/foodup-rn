@@ -47,7 +47,7 @@ class StoreScreenHeader extends React.Component {
             AsyncStorage.removeItem(`${this.props.storeData.id}`)
             this.setState(prevState => ({
                 favorite: !prevState.favorite,
-                favoriteStores: [...prevState.favoriteStores.filter((store) => store.id !== this.props.storeData.id)]
+                favoriteStores: [...prevState.favoriteStores.filter((id) => id !== this.props.storeData.id)]
             }));
 
             Alert.alert(
