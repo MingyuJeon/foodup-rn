@@ -24,10 +24,7 @@ class ImageGalleryScreen extends React.Component {
         const flag = await this.props.navigation.getParam('flag');
 
         const images = imageList.filter(image => image !== '').map((image, i) => {
-            return {
-                caption: title[i].name,
-                source: {uri: image},
-            };
+            return title[i] !== undefined ? { caption: title[i].name, source: {uri: image} } : {source: {uri: image} }
         });
 
         this.setState({...this.state, images, initialIndex, flag});
