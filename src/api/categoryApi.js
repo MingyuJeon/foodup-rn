@@ -6,7 +6,7 @@ export const fetchCategories = async () => {
     try {
         return await categoryRef
             .where('isFeaturedCategory', '==', true)
-            .orderBy('weight', 'desc')
+            .orderBy('weight', 'desc')//TODO: 현재 weight가 문자열로 들어가 있음 => admin panel 수정 예정
             .get()
             .then(async res => await res.docs.map(x => x.data()));
 

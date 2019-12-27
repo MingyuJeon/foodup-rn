@@ -152,12 +152,13 @@ class StoreScreen extends React.Component {
     };
 
     renderStoreInfo = () => {
-        const {addr, city, state, zipCode, phone, businessHour} = this.state.storeData;
+        const {addr, addr2, city, state, zipCode, phone, businessHour} = this.state.storeData;
 
         return (
             <>
                 <StoreDetailInfo action={this.showMap} img={addrIcn}>
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr}`}</Text>
+                    <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr2}`}</Text>
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${city === 'LA' ? 'Los Angeles' : city}, ${state}, ${zipCode}`}</Text>
                 </StoreDetailInfo>
                 <StoreDetailInfo action={this.makeCall} img={phoneIcn}>
