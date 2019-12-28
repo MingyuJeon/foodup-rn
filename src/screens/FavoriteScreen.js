@@ -54,8 +54,6 @@ class FavoriteScreen extends React.Component {
             storeInfo.push(await fetchIdStore(id));
         }
         this.setState({...this.state, stores: storeInfo});
-
-        console.log(this.state);
     };
 
     retrieveMore = async (nativeEvent) => {
@@ -73,7 +71,6 @@ class FavoriteScreen extends React.Component {
     }, 250);
 
     render() {
-        console.log(this.state.stores.length);
         return (
             <Container>
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>
