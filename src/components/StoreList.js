@@ -108,9 +108,7 @@ class StoreList extends React.Component {
         return (
             <View style={styles.container}>
                 {this.props.fetch ? <Loading/> : null}
-                {this.props.stores.length ? this.renderStoreList() :
-                    <Loading/>
-                }
+                {this.renderStoreList()}
             </View>
         );
     }

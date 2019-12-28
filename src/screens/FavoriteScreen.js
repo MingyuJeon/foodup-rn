@@ -21,7 +21,6 @@ class FavoriteScreen extends React.Component {
     state = {
         stores: [],
         fetch: false,
-        noData: false,
     };
 
     componentDidMount(): void {
@@ -41,8 +40,8 @@ class FavoriteScreen extends React.Component {
     }
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
-        if(prevState.stores !== this.state.stores) {
-            this.setState({...this.state, fetch: false, noData: false});
+        if (prevState.stores !== this.state.stores) {
+            this.setState({...this.state, fetch: false});
         }
     }
 
@@ -74,34 +73,32 @@ class FavoriteScreen extends React.Component {
     }, 250);
 
     render() {
-        console.log('here');
+        console.log(this.state.stores.length);
         return (
             <Container>
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
                     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
-                        {this.state.fetch ? <Loading /> :
-                            <StoreList
-                                featuredStoreInfo={false}
-                                fetch={this.state.fetch}
-                                stores={this.state.stores}
-                                retrieveMore={this.retrieveMore}
-                                navigation={this.props.navigation}
-                                moveToStoreScreen={this.moveToStoreScreen}
-                                category={this.categoryName}
-                                from={'Favorite'}
-                            />
-                        }
-                        {
-                            this.state.noData ?
-                                <View style={{flex: 1, padding: 30, justifyContent:'center', alignItems: 'center'}}>
+                        {this.state.fetch ? <Loading/> :
+                            this.state.stores.length === 0 ?
+                                <View style={{flex: 1, padding: 30, justifyContent: 'center', alignItems: 'center'}}>
                                     <FastImage
                                         resizeMode={FastImage.resizeMode.contain}
                                         style={{width: '70%', height: '70%'}}
                                         source={empty}
                                     />
                                     <Text allowFontScaling={false} style={favoriteStyles.txt}>아직 추가된 맛집 리스트가 없어요.</Text>
-                                </View> : null
+                                </View> :
+                                <StoreList
+                                    featuredStoreInfo={false}
+                                    fetch={this.state.fetch}
+                                    stores={this.state.stores}
+                                    retrieveMore={this.retrieveMore}
+                                    navigation={this.props.navigation}
+                                    moveToStoreScreen={this.moveToStoreScreen}
+                                    category={this.categoryName}
+                                    from={'Favorite'}
+                                />
                         }
                     </View>
                 </Content>

@@ -25,7 +25,7 @@ const PrintImages = (props) => {
     fillItems();
 
     return (
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap'}}>
             {
                 temp.map((img, i) =>
                     <TouchableScale
@@ -36,7 +36,7 @@ const PrintImages = (props) => {
                         disabled={!img}
                         activeScale={0.95}
                     >
-                        <View style={{flexDirection: 'column', alignItems: 'center', flex: 1}}>
+                        <View style={{flexDirection: 'column', alignItems: 'center', flex: 1, marginBottom: 10}}>
                             <FastImage
                                 resizeMode={FastImage.resizeMode.cover}
                                 source={{uri: img}}
