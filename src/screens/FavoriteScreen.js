@@ -50,13 +50,16 @@ class FavoriteScreen extends React.Component {
         const stores = JSON.parse(await AsyncStorage.getItem('favorite'));
         const storeInfo = [];
 
-        for (let id of stores) {
-            storeInfo.push(await fetchIdStore(id));
+        if(stores) {
+            for (let id of stores) {
+                storeInfo.push(await fetchIdStore(id));
+            }
         }
-        this.setState({...this.state, stores: storeInfo});
+
+        this.setState({...this.state, fetch: false, stores: storeInfo});
     };
 
-    retrieveMore = async (nativeEvent) => {
+    /*retrieveMore = async (nativeEvent) => {
         if (await retrieveStores(nativeEvent, null)) {
             this.setState({...this.state, fetch: true});
 
@@ -65,12 +68,13 @@ class FavoriteScreen extends React.Component {
             this.setState({...this.state, stores: temp, lastVisible, fetch: false});
         }
     };
-
+*/
     moveToStoreScreen = debounce((data) => {
         this.props.navigation.push('Store', {name: data.name, fromCategory: null, from: 'favorite', favoriteFunc: this.getFavoriteStores});
     }, 250);
 
     render() {
+        console.log(this.state.fetch);
         return (
             <Container>
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>
@@ -90,7 +94,7 @@ class FavoriteScreen extends React.Component {
                                     featuredStoreInfo={false}
                                     fetch={this.state.fetch}
                                     stores={this.state.stores}
-                                    retrieveMore={this.retrieveMore}
+                                    // retrieveMore={this.retrieveMore}
                                     navigation={this.props.navigation}
                                     moveToStoreScreen={this.moveToStoreScreen}
                                     category={this.categoryName}

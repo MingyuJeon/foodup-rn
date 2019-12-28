@@ -20,7 +20,6 @@ const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
                     <KeyboardAvoidingView style={{
                         flex: 1,
                     }} behavior={Platform.OS === 'ios' ? 'padding' : null}>
-
                         <FlatList
                             data={data}
                             keyExtractor={item => item.objectID}
@@ -28,7 +27,7 @@ const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
                             renderItem={({item}) => {
                                 if (!item.hide) {
                                     return (
-                                        <TouchableWithoutFeedback onPress={debounce(() => moveTo(item.name))}>
+                                        <TouchableWithoutFeedback onPress={debounce(() => moveTo(item.name), 250)}>
                                             <View style={styles.item}>
                                                 <Highlight attribute="name" hit={item}/>
                                             </View>
