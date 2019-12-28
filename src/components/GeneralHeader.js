@@ -16,7 +16,7 @@ class GeneralHeader extends React.PureComponent {
                     <Left style={{flex: 1}}>
                         <Button
                             transparent
-                            onPress={() => this.props.navigation.pop()}
+                            onPress={debounce(() => this.props.navigation.pop(), 250)}
                             style={globalStyles.btn}
                         >
                             <FastImage resizeMode={FastImage.resizeMode.contain}
@@ -28,7 +28,7 @@ class GeneralHeader extends React.PureComponent {
                         <Button
                             transparent
                             style={globalStyles.btn}
-                            onPress={() => this.props.navigation.navigate('Home')}
+                            onPress={debounce(() => this.props.navigation.navigate('Home'), 250)}
                         >
                             {
                                 this.props.categoryName? <Text style={styles.header}>{this.props.categoryName}</Text>:

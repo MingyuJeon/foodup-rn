@@ -101,7 +101,7 @@ class StoreScreenHeader extends React.Component {
                         <Button
                             transparent
                             style={globalStyles.btn}
-                            onPress={() => this.props.navigation.navigate('Home')}
+                            onPress={debounce(() => this.props.navigation.navigate('Home'), 250)}
                         >
                             <FastImage resizeMode={FastImage.resizeMode.contain}
                                        style={globalStyles.logoSize}
