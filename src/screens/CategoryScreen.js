@@ -108,14 +108,6 @@ class CategoryScreen extends React.Component {
                 <Content contentContainerStyle={globalStyles.content} scrollEnabled={false}>
                     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
                         <>
-                            {/*<View style={categoryStyles.textContainer}>
-                                <FeaturedCategoryImage categoryInfo={this.state.categoryInfo}/>
-                                <View style={{flexDirection: 'column', alignSelf: 'center', flex: 1}}>
-                                    <Text allowFontScaling={false} style={categoryStyles.subTitle}>푸드업랭킹</Text>
-                                    <Text allowFontScaling={false} style={categoryStyles.categoryNameTitle}>#{this.categoryName}</Text>
-                                </View>
-                            </View>*/}
-                            {/* 얘가 느려지게 하는 주범 */}
                             {
                                 this.categoryName && this.state.categoryInfo ?
                                     <StoreList

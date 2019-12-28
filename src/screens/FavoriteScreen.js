@@ -74,7 +74,6 @@ class FavoriteScreen extends React.Component {
     }, 250);
 
     render() {
-        console.log(this.state.fetch);
         return (
             <Container>
                 <GeneralHeader flag={false} navigation={this.props.navigation}/>

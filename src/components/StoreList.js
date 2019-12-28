@@ -77,7 +77,7 @@ class StoreList extends React.Component {
                 }}
                 ListHeaderComponent={
                     this.props.from ?
-                        <View style={categoryStyles.textContainer}>
+                        <View style={[categoryStyles.textContainer, {marginBottom: 10}]}>
                             <View style={{flexDirection: 'column', alignSelf: 'center'}}>
                                 <Icon name="heart" size={30} color="#fff" style={{paddingLeft: 10}}/>
 
