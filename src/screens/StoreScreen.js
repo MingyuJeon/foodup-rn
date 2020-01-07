@@ -158,15 +158,18 @@ class StoreScreen extends React.Component {
             <>
                 <StoreDetailInfo action={this.showMap} img={addrIcn}>
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr}`}</Text>
-                    <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr2}`}</Text>
+                    {addr2 ? <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${addr2}`}</Text> : null}
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{`${city === 'LA' ? 'Los Angeles' : city}, ${state}, ${zipCode}`}</Text>
                 </StoreDetailInfo>
                 <StoreDetailInfo action={this.makeCall} img={phoneIcn}>
                     <Text allowFontScaling={false} style={storeStyles.touchableFont}>{phone.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/, '$1-$2-$3')}</Text>
                 </StoreDetailInfo>
-                <StoreDetailInfo action={null} img={businessHourIcn}>
-                    <Text allowFontScaling={false} style={{lineHeight: 21}}>{businessHour}</Text>
-                </StoreDetailInfo>
+                {
+                    businessHour ?
+                    <StoreDetailInfo action={null} img={businessHourIcn}>
+                        <Text allowFontScaling={false} style={{lineHeight: 21}}>{businessHour}</Text>
+                    </StoreDetailInfo> : null
+                }
             </>
         );
     };

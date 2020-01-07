@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, PermissionsAndroid, ScrollView, Text, View} from 'react-native';
+import {Alert, PermissionsAndroid, ScrollView, Text, View, Button} from 'react-native';
 import {Container, Content} from 'native-base';
 import homeStyles from '../styles/HomeScreen';
 import globalStyles from '../styles';
@@ -7,8 +7,11 @@ import {fetchCategories} from '../api/categoryApi';
 import CategoryList from '../components/CategoryList';
 import HomeScreenHeader from '../components/HomeScreenHeader';
 import Loading from '../components/Loading';
-import debounce from 'lodash.debounce';
 import NetInfo from '@react-native-community/netinfo';
+
+
+import {db} from '../api';
+
 
 // import AsyncStorage from '@react-native-community/async-storage';
 
@@ -47,6 +50,77 @@ class HomeScreen extends Component {
         this.setState({categories, fetching: false});
     };
 
+    /*getData = async () => {
+        /!*const testArr = [{name: 'mingyu'}, {name: 'heamin'}];
+        const ans = testArr.filter(e => e.name == 'mingyu');
+
+        if(!ans) {
+        }
+
+        console.log(ans);*!/
+
+        const categoryRef = db.collection('categories');
+        let categories = [];
+        await categoryRef.get()
+            .then(res => {
+                categories = res.docs.map(x => x.data().name);
+            })
+        let relatedStores = {};
+
+        for (let category of categories) {
+            console.log('loading');
+            await db.collection('categories').doc(category).collection('relatedStore').get()
+                .then(res => {
+                    relatedStores[category] = res.docs.map(x => x.data().name);
+                })
+        }
+
+        // let list = {}
+        // let emptyList = []
+        // let noChips = {}
+        for (const category in relatedStores) {
+            console.log('loading...')
+            if (relatedStores[category] && relatedStores[category].length > 0) {
+                /!*for (let store of relatedStores[category]) {
+                    await db.collection('stores').doc(store).get().then(res => {
+                        let flag = [];
+                        // console.log(res.data(), category, store);
+
+                        if(res.data() && res.data().hasOwnProperty('categoryChips')) {
+                            flag = res.data()?.categoryChips.filter(e => e.name == category)
+                        } else {
+                            if (noChips[category] && noChips[category].length > 0 ) {
+                                noChips[category].push(store);
+                            } else {
+                                noChips[category] = [];
+                                noChips[category].push(store);
+                            }
+                        }
+
+                        if(flag.length === 0) {
+                            // console.log(list)
+                            if (list[category] && list[category].length > 0 ) {
+                                list[category].push(store);
+                            } else {
+                                list[category] = [];
+                                list[category].push(store)
+                            }
+                        }
+                    })
+                }*!/
+            } else {
+                await db.collection('categories').doc(category).delete();
+                // await db.collection('categories').doc(category).collection('relatedStore').get()
+                // emptyList.push(category)
+            }
+        }
+
+        /!*console.log('- emptyList -', emptyList)
+        console.log('- noChips -', noChips)
+        console.log('==========================================================================')
+        console.log('- error 유발 list -', list);*!/
+    }*/
+
     render() {
         return (
             <Container>
@@ -60,6 +134,10 @@ class HomeScreen extends Component {
                                     <Text style={homeStyles.TextStr} allowFontScaling={false}>오늘은</Text>
                                     <Text style={homeStyles.TextStr} allowFontScaling={false}>또 뭘 먹지?</Text>
                                 </View>
+
+       {/*                         <View style={{height:100}}>
+                                    <Button onPress={this.getData} title={'click'}/>
+                                </View>*/}
 
                                 <CategoryList
                                     categories={this.state.categories}
