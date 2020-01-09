@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView, FlatList, Platform, Linking, Alert} from 'react-native';
+import {View, Text, ScrollView, FlatList, Platform, Linking, Alert, PermissionsAndroid} from 'react-native';
 import {Container, Content} from 'native-base';
 import StoreScreenHeader from '../components/StoreScreenHeader';
 import {fetchStore} from '../api/storeApi';
@@ -20,7 +20,7 @@ import menuIcn from '../../assets/Foodup_icons/store_screen/menu.png';
 import Geolocation from '@react-native-community/geolocation';
 import debounce from 'lodash.debounce';
 import NetInfo from '@react-native-community/netinfo';
-import {check, PERMISSIONS, RESULTS} from 'react-native-permissions';
+import {check, PERMISSIONS, request, RESULTS} from 'react-native-permissions';
 
 import {InteractionManager} from 'react-native';
 
@@ -54,37 +54,12 @@ class StoreScreen extends React.Component {
                         ],
                     );
                 } else {
+                    // this.check();
                     this.getStoreName();
                     this.getCurrentPosition();
                 }
             });
         });
-
-
-        /*check(PERMISSIONS.IOS.LOCATION_ALWAYS || PERMISSIONS.IOS.LOCATION_WHEN_IN_USE ||PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION)
-            .then(result => {
-                switch (result) {
-                    case RESULTS.UNAVAILABLE:
-                        alert(
-                            'This feature is not available (on this device / in this context)',
-                        );
-                        break;
-                    case RESULTS.DENIED:
-                        alert(
-                            'The permission has not been requested / is denied but requestable',
-                        );
-                        break;
-                    case RESULTS.GRANTED:
-                        alert('The permission is granted');
-                        break;
-                    case RESULTS.BLOCKED:
-                        alert('The permission is denied and not requestable anymore');
-                        break;
-                }
-            })
-            .catch(error => {
-                // …
-            });*/
     }
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {

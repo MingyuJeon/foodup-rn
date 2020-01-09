@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.foodup",
+    package = "com.foodup.b2b",
 )
 
 android_resource(
     name = "res",
-    package = "com.foodup",
+    package = "com.foodup.b2b",
     res = "src/main/res",
 )
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Alert, PermissionsAndroid, ScrollView, Text, View, Button} from 'react-native';
+import {Alert, ScrollView, Text, View, Button} from 'react-native';
 import {Container, Content} from 'native-base';
 import homeStyles from '../styles/HomeScreen';
 import globalStyles from '../styles';
@@ -11,6 +11,7 @@ import NetInfo from '@react-native-community/netinfo';
 
 
 import {db} from '../api';
+import {check, PERMISSIONS, request, RESULTS} from 'react-native-permissions';
 
 
 // import AsyncStorage from '@react-native-community/async-storage';
@@ -50,14 +51,14 @@ class HomeScreen extends Component {
         this.setState({categories, fetching: false});
     };
 
-    /*getData = async () => {
-        /!*const testArr = [{name: 'mingyu'}, {name: 'heamin'}];
+    getData = async () => {
+        /*const testArr = [{name: 'mingyu'}, {name: 'heamin'}];
         const ans = testArr.filter(e => e.name == 'mingyu');
 
         if(!ans) {
         }
 
-        console.log(ans);*!/
+        console.log(ans);*/
 
         const categoryRef = db.collection('categories');
         let categories = [];
@@ -81,7 +82,7 @@ class HomeScreen extends Component {
         for (const category in relatedStores) {
             console.log('loading...')
             if (relatedStores[category] && relatedStores[category].length > 0) {
-                /!*for (let store of relatedStores[category]) {
+                /*for (let store of relatedStores[category]) {
                     await db.collection('stores').doc(store).get().then(res => {
                         let flag = [];
                         // console.log(res.data(), category, store);
@@ -107,18 +108,53 @@ class HomeScreen extends Component {
                             }
                         }
                     })
-                }*!/
+                }*/
             } else {
+                console.log(category);
                 await db.collection('categories').doc(category).delete();
                 // await db.collection('categories').doc(category).collection('relatedStore').get()
                 // emptyList.push(category)
             }
         }
 
-        /!*console.log('- emptyList -', emptyList)
+        /*console.log('- emptyList -', emptyList)
         console.log('- noChips -', noChips)
         console.log('==========================================================================')
-        console.log('- error 유발 list -', list);*!/
+        console.log('- error 유발 list -', list);*/
+    }
+
+    /*finder = async () => {
+        let categoryList = [];
+        let hideStoreList = [];
+        await db.collection('categories').get().then(res => {
+            categoryList = res.docs
+                .map(x => x.data().name)
+        });
+
+        console.log('done');
+
+        await db.collection('stores').where('hide', '==', true).get().then(res => {
+            hideStoreList = res.docs.map(x => x.data().name)
+        })
+
+        console.log('done');
+
+        for (const category in categoryList) {
+            let relateStoreList = []
+            relateStoreList = await db.collection('categories').doc(categoryList[category]).collection('relatedStore').get().then(res => res.docs.map(x => x.data().name));
+
+            relateStoreList.filter(store => {
+                hideStoreList.filter(item => {
+                    if(store === item) {
+                        console.log(`${categoryList[category]}: ${item} =============> ${store}`);
+
+                        // db.collection('categories').doc(categoryList[category]).collection('relatedStore').doc(item).delete();
+                    }
+                });
+            });
+
+
+        }
     }*/
 
     render() {
@@ -135,7 +171,7 @@ class HomeScreen extends Component {
                                     <Text style={homeStyles.TextStr} allowFontScaling={false}>또 뭘 먹지?</Text>
                                 </View>
 
-       {/*                         <View style={{height:100}}>
+                                {/*<View style={{height:100}}>
                                     <Button onPress={this.getData} title={'click'}/>
                                 </View>*/}
 

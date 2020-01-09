@@ -1,4 +1,4 @@
-package com.foodup;
+package com.foodup.b2b;
 
 import android.os.Bundle;
 import org.devio.rn.splashscreen.SplashScreen;

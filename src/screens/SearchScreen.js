@@ -55,7 +55,7 @@ class SearchScreen extends React.Component {
         return (
             <Container>
                 <GeneralHeader flag={true} navigation={this.props.navigation}/>
-                <Content contentContainerStyle={{flex: 1}} scrollEnabled={false}>
+                <Content scrollEnabled={false}>
                     <InstantSearch
                         searchClient={searchClient}
                         indexName={'categories'}
@@ -74,6 +74,7 @@ class SearchScreen extends React.Component {
                                 borderColor: '#c1c1c1',
                                 width: '90%',
                                 alignSelf: 'center',
+                                paddingTop: 10
                             }}/>
                         </Index>
                         <Index indexName="stores">

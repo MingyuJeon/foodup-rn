@@ -22,7 +22,7 @@ const SearchBox = connectSearchBox(({refine, currentRefinement, _presKey}, props
             </View>
             <TextInput
                 style={styles.input}
-                placeholder="한식, 짜장면, 양식, 명랑 핫도그, 강호동 백정, etc"
+                placeholder="한식, 짜장면, 양식, 강호동 백정..."
                 returnKeyType={'search'}
                 onChangeText={value => refine(value)}
                 underlineColorAndroid="transparent"

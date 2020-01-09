@@ -31,7 +31,7 @@ class StoreList extends React.Component {
 
     goToStoreScreen = debounce((store) => {
         this.props.moveToStoreScreen(store.item);
-    }, 250);
+    }, 500);
 
     renderStoreItem = (store) => {
         const {featuredStoreInfo, likes, from, category, onClickLike} = this.props;

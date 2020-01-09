@@ -24,7 +24,7 @@ const StoreItem = ({i, store, featuredStoreInfo, onClickLike, category, from, go
                 <StoreInfoBlock
                     i={i}
                     store={store}
-                    goToStoreScreen={() => goToStoreScreen(store)}
+                    // goToStoreScreen={() => goToStoreScreen(store)}
                     featuredStoreInfo={featuredStoreInfo}
                     onClickLike={() => onClickLike(i)}
                     category={category}
