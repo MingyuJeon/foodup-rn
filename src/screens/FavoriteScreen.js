@@ -39,7 +39,7 @@ class FavoriteScreen extends React.Component {
         });
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot): void {
+    componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevState.stores !== this.state.stores) {
             this.setState({...this.state, fetch: false});
         }

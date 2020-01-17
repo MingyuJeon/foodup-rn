@@ -18,7 +18,7 @@ class ThumbUp extends React.Component {
         return nextState.progress !== this.state.progress || nextProps.flag !== this.props.flag;
     }
 
-    componentDidMount(): void {
+    componentDidMount() {
         this.getFlag();
     }
 

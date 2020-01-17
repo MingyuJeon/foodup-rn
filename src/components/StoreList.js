@@ -113,7 +113,7 @@ class StoreList extends React.Component {
         );
     }
 
-    componentWillUnmount(): void {
+    componentWillUnmount() {
         clearTimeout(this._timeOut);
     }
 }
