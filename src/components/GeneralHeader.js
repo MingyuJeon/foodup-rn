@@ -4,7 +4,7 @@ import globalStyles from '../styles';
 import {Body, Button, Header, Left, Right} from 'native-base';
 import FastImage from 'react-native-fast-image';
 import btnStyles from '../styles/HomeScreen';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 class GeneralHeader extends React.PureComponent {
@@ -16,7 +16,7 @@ class GeneralHeader extends React.PureComponent {
                     <Left style={{flex: 1}}>
                         <Button
                             transparent
-                            onPress={debounce(() => this.props.navigation.pop(), 250)}
+                            onPress={throttle(() => this.props.navigation.pop(), 250)}
                             style={globalStyles.btn}
                         >
                             <FastImage resizeMode={FastImage.resizeMode.contain}
@@ -28,7 +28,7 @@ class GeneralHeader extends React.PureComponent {
                         <Button
                             transparent
                             style={globalStyles.btn}
-                            onPress={debounce(() => this.props.navigation.navigate('Home'), 250)}
+                            onPress={throttle(() => this.props.navigation.navigate('Home'), 250)}
                         >
                             {
                                 this.props.categoryName? <Text style={styles.header}>{this.props.categoryName}</Text>:
@@ -43,7 +43,7 @@ class GeneralHeader extends React.PureComponent {
                         this.props?.flag ? <Right/> :
                             <Right style={{flex: 1}}>
                                 <Button transparent
-                                        onPress={debounce(() => this.props.navigation.push('Search'), 250)}
+                                        onPress={throttle(() => this.props.navigation.push('Search'), 250)}
                                         style={globalStyles.btn}
                                 >
                                     <FastImage

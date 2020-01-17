@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import storeStyles from '../styles/StoreScreen';
 import TouchableScale from 'react-native-touchable-scale';
+import throttle from 'lodash.throttle';
 
 const PrintImages = (props) => {
     const {title, imageList, thumbs} = props;
@@ -42,9 +43,9 @@ const PrintImages = (props) => {
             {
                 temp.map((img, i) =>
                     <TouchableScale
-                        onPress={() => {
+                        onPress={throttle(() => {
                             props.navigation.push('ImageGallery', {images: imageList, title, initialIndex: i, flag: props.flag});
-                        }}
+                        }, 250)}
                         key={`${img}-${i}`}
                         disabled={!img}
                         activeScale={0.95}

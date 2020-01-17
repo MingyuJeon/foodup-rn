@@ -13,7 +13,7 @@ import StoreList from '../components/StoreList';
 import GeneralHeader from '../components/GeneralHeader';
 import {voteDocRef} from '../api/storeApi';
 import retrieveStores from '../modules/retrieveStores';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 
 class CategoryScreen extends React.Component {
     static navigationOptions = {header: null};
@@ -96,7 +96,7 @@ class CategoryScreen extends React.Component {
         this.setState(data);
     };
 
-    moveToStoreScreen = debounce((store) => {
+    moveToStoreScreen = throttle((store) => {
         const {name, thumb} = store;
         this.props.navigation.push('Store', {name, thumb, fromCategory: this.fromCategory, from: this.state.from});
     }, 250);

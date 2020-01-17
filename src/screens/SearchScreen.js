@@ -6,7 +6,7 @@ import Hits from '../components/Hits';
 import {Container, Content, Text} from 'native-base';
 import algoliasearch from 'algoliasearch/reactnative';
 import {Configure, Index, InstantSearch} from 'react-instantsearch-native';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import SearchBox from '../components/SearchBox';
 import NetInfo from '@react-native-community/netinfo';
 
@@ -43,11 +43,11 @@ class SearchScreen extends React.Component {
         });
     }
 
-    moveToCategory = debounce((name) => {
+    moveToCategory = throttle((name) => {
         this.props.navigation.push('Category', {categoryName: name});
     }, 250);
 
-    moveToStore = debounce((name) => {
+    moveToStore = throttle((name) => {
         this.props.navigation.push('Store', {name: name});
     }, 250);
 

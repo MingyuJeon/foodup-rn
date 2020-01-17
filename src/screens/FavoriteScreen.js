@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import StoreList from '../components/StoreList';
 import retrieveStores from '../modules/retrieveStores';
 import {fetchMore} from '../api/categoryApi';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import FastImage from 'react-native-fast-image';
 import empty from '../../assets/Foodup_icons/favorite_empty.png';
 import favoriteStyles from '../styles/FavoriteScreen';
@@ -69,7 +69,7 @@ class FavoriteScreen extends React.Component {
         }
     };
 */
-    moveToStoreScreen = debounce((data) => {
+    moveToStoreScreen = throttle((data) => {
         this.props.navigation.push('Store', {name: data.name, fromCategory: null, from: 'favorite', favoriteFunc: this.getFavoriteStores});
     }, 250);
 

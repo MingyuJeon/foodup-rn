@@ -3,7 +3,7 @@ import {View, FlatList, Text} from 'react-native';
 import StoreItem from './StoreItem';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Loading from '../components/Loading';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import categoryStyles from '../styles/CategoryScreen';
 import FeaturedCategoryImage from './FeaturedCategoryImage';
 import Icon from 'react-native-vector-icons/Entypo';
@@ -29,7 +29,7 @@ class StoreList extends React.Component {
         });
     };
 
-    goToStoreScreen = debounce((store) => {
+    goToStoreScreen = throttle((store) => {
         this.props.moveToStoreScreen(store.item);
     }, 500);
 

@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, FlatList, TouchableWithoutFeedback, KeyboardAvoi
 import {connectInfiniteHits} from 'react-instantsearch-native';
 import Highlight from './Highlight';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 
 const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
     let data;
@@ -27,7 +27,7 @@ const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
                             renderItem={({item}) => {
                                 if (!item.hide) {
                                     return (
-                                        <TouchableWithoutFeedback onPress={debounce(() => moveTo(item.name), 250)}>
+                                        <TouchableWithoutFeedback onPress={throttle(() => moveTo(item.name), 250)}>
                                             <View style={styles.item}>
                                                 <Highlight attribute="name" hit={item}/>
                                             </View>

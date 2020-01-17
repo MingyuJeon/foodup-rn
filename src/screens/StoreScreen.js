@@ -18,7 +18,7 @@ import bestMenuIcn from '../../assets/Foodup_icons/store_screen/best.png';
 import honeyTipIcn from '../../assets/Foodup_icons/store_screen/detail_honeytips.png';
 import menuIcn from '../../assets/Foodup_icons/store_screen/menu.png';
 import Geolocation from '@react-native-community/geolocation';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import NetInfo from '@react-native-community/netinfo';
 import {check, PERMISSIONS, request, RESULTS} from 'react-native-permissions';
 
@@ -68,7 +68,7 @@ class StoreScreen extends React.Component {
         }
     }
 
-    goToCategory = debounce((name) => {
+    goToCategory = throttle((name) => {
         this.props.navigation.push('Category', {categoryName: name});
     }, 250);
 

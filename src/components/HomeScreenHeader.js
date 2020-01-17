@@ -4,7 +4,7 @@ import globalStyles from '../styles';
 import {Body, Button, Header, Left, Right} from 'native-base';
 import FastImage from 'react-native-fast-image';
 import styles from '../styles/HomeScreen';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 
 const HomeScreenHeader = ({navigation}) => {
     return (
@@ -14,7 +14,7 @@ const HomeScreenHeader = ({navigation}) => {
                 <Left style={{flex: 1}}>
                     <Button
                         transparent
-                        onPress={debounce(() => navigation.push('Favorite'), 250)}
+                        onPress={throttle(() => navigation.push('Favorite'), 250)}
                         style={globalStyles.btn}
                     >
                         <FastImage resizeMode={FastImage.resizeMode.contain}
@@ -34,7 +34,7 @@ const HomeScreenHeader = ({navigation}) => {
                 </Body>
                 <Right style={{flex: 1}}>
                     <Button transparent
-                            onPress={debounce(() => navigation.push('Search'), 250)}
+                            onPress={throttle(() => navigation.push('Search'), 250)}
                             style={globalStyles.btn}
                     >
                         <FastImage

@@ -2,7 +2,7 @@ import React from 'react';
 import {Animated, Easing} from 'react-native';
 import LottieView from 'lottie-react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 import thumbup from '../../assets/animation/thumb-up.json';
 import TouchableScale from 'react-native-touchable-scale';
 
@@ -36,7 +36,7 @@ class ThumbUp extends React.Component {
         <LottieView progress={this.state.progress} source={thumbup} autoSize={true}/>
     );
 
-    voting = debounce(() => {
+    voting = throttle(() => {
         const index = this.props.i;
 
         Animated.timing(this.state.progress, {

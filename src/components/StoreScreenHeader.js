@@ -4,7 +4,7 @@ import globalStyles from '../styles';
 import {Body, Button, Header, Left, Right} from 'native-base';
 import FastImage from 'react-native-fast-image';
 import styles from '../styles/HomeScreen';
-import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
 
 import favoriteOff from '../../assets/Foodup_icons/favorite_filledout.png';
 import favoriteOn from '../../assets/Foodup_icons/favorite_filledin.png';
@@ -42,7 +42,7 @@ class StoreScreenHeader extends React.Component {
         }
     };
 
-    onClickFavorite = debounce(async () => {
+    onClickFavorite = throttle(async () => {
         if (this.state.favorite) {
             AsyncStorage.removeItem(`${this.props.storeData.id}`)
             this.setState(prevState => ({
@@ -72,7 +72,7 @@ class StoreScreenHeader extends React.Component {
         }
     }, 250);
 
-    goBack = debounce(() => {
+    goBack = throttle(() => {
         const {navigation, favoriteFunc} = this.props;
         if(favoriteFunc) {
             favoriteFunc();
@@ -101,7 +101,7 @@ class StoreScreenHeader extends React.Component {
                         <Button
                             transparent
                             style={globalStyles.btn}
-                            onPress={debounce(() => this.props.navigation.navigate('Home'), 250)}
+                            onPress={throttle(() => this.props.navigation.navigate('Home'), 250)}
                         >
                             <FastImage resizeMode={FastImage.resizeMode.contain}
                                        style={globalStyles.logoSize}
