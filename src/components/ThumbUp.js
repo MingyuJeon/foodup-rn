@@ -14,7 +14,7 @@ class ThumbUp extends React.Component {
         };
     }
 
-    shouldComponentUpdate(nextProps: Readonly<P>, nextState: Readonly<S>, nextContext: any) {
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
         return nextState.progress !== this.state.progress || nextProps.flag !== this.props.flag;
     }
 

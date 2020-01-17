@@ -53,7 +53,7 @@ class StoreList extends React.Component {
         );
     };
 
-    handleScroll = (event: Object) => {
+    handleScroll = (event) => {
         this.setState({scrollPosition: event.nativeEvent.contentOffset.y});
     };
 

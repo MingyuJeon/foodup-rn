@@ -62,7 +62,7 @@ class StoreScreen extends React.Component {
         });
     }
 
-    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
+    componentDidUpdate(prevProps, prevState, snapshot): void {
         if (prevState.storeName !== this.state.storeName || prevState.triggerFunc !== this.state.triggerFunc) {
             this.fetchStoreInfo();
         }
