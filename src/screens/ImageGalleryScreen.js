@@ -13,7 +13,7 @@ class ImageGalleryScreen extends React.Component {
         flag: false,
     };
 
-    componentDidMount(): void {
+    componentDidMount() {
         this.getImage();
     }
 

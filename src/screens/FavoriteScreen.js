@@ -23,7 +23,7 @@ class FavoriteScreen extends React.Component {
         fetch: false,
     };
 
-    componentDidMount(): void {
+    componentDidMount() {
         NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 Alert.alert(

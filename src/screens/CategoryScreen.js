@@ -29,7 +29,7 @@ class CategoryScreen extends React.Component {
 
     categoryName;
 
-    componentDidMount(): void {
+    componentDidMount() {
         /*NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 Alert.alert(

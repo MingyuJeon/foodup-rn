@@ -8,7 +8,7 @@ export default class Components extends Component {
         );
     }
 
-    componentWillUnmount(): void {
+    componentWillUnmount() {
         clearTimeout();
     }
 }

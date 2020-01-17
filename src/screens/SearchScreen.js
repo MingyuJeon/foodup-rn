@@ -29,7 +29,7 @@ class SearchScreen extends React.Component {
         },
     };
 
-    componentDidMount(): void {
+    componentDidMount() {
         NetInfo.fetch().then(state => {
             if (!state.isConnected) {
                 Alert.alert(

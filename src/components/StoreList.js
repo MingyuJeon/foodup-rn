@@ -14,7 +14,7 @@ class StoreList extends React.Component {
         scrollPosition: 0,
     };
 
-    componentDidMount(): void {
+    componentDidMount() {
         this.flatList = React.createRef();
     }
 

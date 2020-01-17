@@ -41,7 +41,7 @@ class StoreScreen extends React.Component {
         };
     }
 
-    componentDidMount(): void {
+    componentDidMount() {
         InteractionManager.runAfterInteractions(() => {
 
             NetInfo.fetch().then(state => {

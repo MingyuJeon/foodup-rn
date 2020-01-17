@@ -19,7 +19,7 @@ class StoreScreenHeader extends React.Component {
         };
     }
 
-    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS): void {
+    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS) {
         if (prevProps.storeData !== this.props.storeData) {
             this.getFavorite();
         }
