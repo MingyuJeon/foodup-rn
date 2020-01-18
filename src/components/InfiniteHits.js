@@ -1,10 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, FlatList, TouchableWithoutFeedback, KeyboardAvoidingView} from 'react-native';
+import {Dimensions, Text, View, FlatList, TouchableWithoutFeedback, KeyboardAvoidingView} from 'react-native';
 import {connectInfiniteHits} from 'react-instantsearch-native';
 import Highlight from './Highlight';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import throttle from 'lodash.throttle';
-
+let H = Dimensions.get('window').height/3
 const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
     let data;
 
@@ -17,11 +17,10 @@ const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
         <>
             {
                 data.length ?
-                    <KeyboardAvoidingView style={{
-                        flex: 1,
-                    }} behavior={Platform.OS === 'ios' ? 'padding' : null}>
+                    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : null}>
                         <FlatList
                             data={data}
+                            style={{height: H, flexGrow: 0}}
                             keyExtractor={item => item.objectID}
                             onEndReached={() => hasMore && refine()}
                             renderItem={({item}) => {
@@ -37,7 +36,6 @@ const InfiniteHits = ({flag, hits, hasMore, refine, moveTo}) => {
                                     return null;
                                 }
                             }}
-                            style={{flex: 1}}
                         />
                     </KeyboardAvoidingView>
                     :

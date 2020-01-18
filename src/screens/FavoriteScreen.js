@@ -87,7 +87,7 @@ class FavoriteScreen extends React.Component {
                                         style={{width: '70%', height: '70%'}}
                                         source={empty}
                                     />
-                                    <Text allowFontScaling={false} style={favoriteStyles.txt}>아직 추가된 맛집 리스트가 없어요.</Text>
+                                    <Text allowFontScaling={false} style={favoriteStyles.txt}>하트를 눌러서 즐겨찾기에 추가하세요</Text>
                                 </View> :
                                 <StoreList
                                     featuredStoreInfo={false}
