@@ -67,7 +67,7 @@ export default class StoreInfoBlock extends PureComponent {
                                 )
                             }
                         </View>
-                        {featuredStoreInfo && (i === 0) || from === 'Favorite' ? null : <Text allowFontScaling={false} style={{color: '#f90631', fontFamily: 'ThecircleB', fontSize: 14}}>{store.count} UP</Text>}
+                        {featuredStoreInfo && (i === 0) || from === 'Favorite' ? null : <Text allowFontScaling={false} style={{color: '#f90631', fontFamily: 'ThecircleB', fontSize: 14}}>{store.count * 17} UP</Text>}
                     </View>
                 </View>
             </View>

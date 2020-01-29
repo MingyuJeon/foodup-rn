@@ -32,6 +32,7 @@ export const fetchRelatedStores = async (name) => { // count가 속한 컬렉션
             .doc(name)
             .collection('relatedStore')
             .where('hide', '==', false)
+            // .where('count', '>', 0)
             .orderBy('count', 'desc')
             .limit(15)
             .get()
@@ -39,6 +40,16 @@ export const fetchRelatedStores = async (name) => { // count가 속한 컬렉션
                 let lastVisible = snapshots.docs[snapshots.docs.length - 1];
                 let stores = [];
                 snapshots.docs.map(x => stores.push(x.data()));
+                /*stores.forEach(store => {
+                    if(store.count % 17 == 0) {
+                        while(store.count % 17 === 0) {
+                            store.count = parseInt(store.count / 17);
+                        }
+
+                        console.log(store.count);
+                        categoryRef.doc(name).collection('relatedStore').doc(store.name).update({count: store.count});
+                    }
+                })*/
                 return {stores, lastVisible};
             });
     } catch (e) {

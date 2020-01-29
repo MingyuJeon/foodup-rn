@@ -26,7 +26,7 @@ export const voteDocRef = async (storeName, categoryName) => {
                 throw 'Doesn\'t exist!';
             }
 
-            const newCount = voteDoc.data().count + 17;
+            const newCount = voteDoc.data().count + 1;
 
             try {
                 const timeNow = Date.now();
